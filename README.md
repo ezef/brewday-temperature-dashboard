@@ -1,0 +1,2 @@
+## Brewday temperatures dashboard
+I'm a homebrew and this project will provide me with real time temperatures though a webpage updated each 2 secs. I'm planning to use it while mashing or cooling the beer, to measure the real time temperature of the chiller output
