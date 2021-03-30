@@ -40,8 +40,15 @@ void handleTemperaturesResponse(){
     "temperature2":{{temperature2}},
   }
 )=====";
-  response.replace("{{temperature1}}", "123");
-  response.replace("{{temperature2}}", "434");
+
+  char temp_1_char[10];
+  dtostrf(tempsensada1, 4, 3, temp_1_char);
+
+  char temp_2_char[10];
+  dtostrf(tempsensada2, 4, 3, temp_2_char);
+
+  response.replace("{{temperature1}}", (char *) temp_1_char);
+  response.replace("{{temperature2}}", (char *) temp_2_char);
 
   server.send(200, "text/html", response);
 }
