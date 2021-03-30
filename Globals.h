@@ -12,12 +12,6 @@
     #define ONE_WIRE_BUS 14
     #define ONE_WIRE_BUS2 2 // TBD
 
-    // #define TEMPERATURE_PRECISION 9
-    // #define HISTERESIS 0.3
-
-    extern const char* ssid;
-    extern const char* password;
-
     extern float tempsensada1;
     extern float tempsensada2;
 

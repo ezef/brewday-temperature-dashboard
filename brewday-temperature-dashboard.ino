@@ -3,7 +3,7 @@
 #include "TemperatureControlFunctions.h"
 #include "Globals.h"
 #include "HTTPserver.h"
-
+#include "Secrets.h"
 
 void initWIFI() {
   WiFi.mode(WIFI_STA);
@@ -20,10 +20,6 @@ void setup(void) {
   SPIFFS.begin(); delay(10);
 
   readTemperatures();
-
-  // Serial.print(" Sensor1: ");
-  // Serial.print(tempsensada1);
-
 }
 
 void loop(void) {
@@ -33,11 +29,6 @@ void loop(void) {
   }
 
   server.handleClient();
-
-  // if (tempo_step_change.state() && temperatureControlMode == STEPPED_MODE ){
-    // updateElapsedHours();
-    // evaluateTemperatureChange();
-  // } 
 
    if (t_temp.state()){ 
      readTemperatures();
